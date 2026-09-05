@@ -37,9 +37,7 @@ public class RockPaperScissors {
 
             System.out.print("Round " + (i + 1)
                     + " - Enter Rock, Paper, or Scissors: ");
-
             String playerMove = scanner.nextLine();
-
             if (playerMove.equalsIgnoreCase("rock")) {
                 playerMove = "Rock";
             } else if (playerMove.equalsIgnoreCase("paper")) {
@@ -47,19 +45,14 @@ public class RockPaperScissors {
             } else {
                 playerMove = "Scissors";
             }
-
             String computerMove = moves[random.nextInt(3)];
-
             String result = playRound(playerMove, computerMove);
-
             playerMoves[i] = playerMove;
             computerMoves[i] = computerMove;
             results[i] = result;
-
             System.out.println("Computer: " + computerMove);
             System.out.println("Result: " + result);
             System.out.println();
-
             if (result.equals("Player Wins")) {
                 wins++;
             } else if (result.equals("Computer Wins")) {
@@ -70,7 +63,6 @@ public class RockPaperScissors {
         }
         System.out.printf("%-8s %-15s %-15s %-15s%n",
                 "Round", "Player Move", "Computer Move", "Result");
-
         for (int i = 0; i < 5; i++) {
             System.out.printf("%-8d %-15s %-15s %-15s%n",
                     i + 1,
@@ -84,7 +76,6 @@ public class RockPaperScissors {
         System.out.println("Losses : " + losses);
         System.out.println("Draws  : " + draws);
         System.out.println("Win %  : " + winPercentage + "%");
-
         scanner.close();
     }
 }
