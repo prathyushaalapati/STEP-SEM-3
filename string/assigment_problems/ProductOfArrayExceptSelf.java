@@ -1,3 +1,4 @@
+package string.assigment_problems;
 import java.util.Arrays;
 
 public class ProductOfArrayExceptSelf {
